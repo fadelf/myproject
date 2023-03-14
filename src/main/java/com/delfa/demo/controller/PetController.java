@@ -4,6 +4,7 @@ import com.delfa.demo.service.PetService;
 import com.delfa.demo.wrapper.PetData;
 import com.delfa.demo.wrapper.PetResponse;
 import com.delfa.demo.wrapper.StatusResponse;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,6 +24,7 @@ public class PetController {
         this.petService = petService;
     }
 
+    @Operation(description = "Find pet by status (available, sold, pending)")
     @RequestMapping(path = "/find/{status}", method = RequestMethod.GET)
     public ResponseEntity<?> getPetByStatus(@PathVariable String status) {
         PetResponse response = new PetResponse();

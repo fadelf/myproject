@@ -11,8 +11,8 @@
       `mvn -o clean install`
 
 2. Run the application (this will generate database structure as well):  
-   a) localhost Environment:  
-   `java -jar /target/*.jar`
+   localhost environment (Windows):  
+   `java -jar .\target\demo-0.0.1-SNAPSHOT.jar`
 
 3. Access the application documentation of APIs using this URL :
    http://localhost:8080/swagger-ui/index.html
